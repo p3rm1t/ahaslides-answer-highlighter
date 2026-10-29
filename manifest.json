@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AhaSlides 答案提示",
+  "version": "0.1.0",
+  "description": "读取当前 AhaSlides 题目接口提供的答案，在答题页面高亮正确选项。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": ["https://audience.ahaslides.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "显示或收起 AhaSlides 答案提示",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["https://audience.ahaslides.com/*"],
+    "js": ["core.js", "content.js"],
+    "css": ["highlight.css"],
+    "run_at": "document_idle"
+  }]
+}

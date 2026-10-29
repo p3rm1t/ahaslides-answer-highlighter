@@ -1,0 +1,7 @@
+output/
+tests/
+.playwright/
+.playwright-cli/
+*.zip
+.DS_Store
+*.log

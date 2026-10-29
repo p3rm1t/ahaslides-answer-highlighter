@@ -1,0 +1,17 @@
+[data-aha-answer="correct"] {
+  outline: 3px solid #00856c !important;
+  outline-offset: 2px !important;
+  box-shadow: inset 0 0 0 2px #fff, 0 0 0 6px #a9efda !important;
+}
+[data-aha-answer="correct"] .aha-option__label::after,
+[data-aha-answer="correct"] .option-title::after {
+  content: " ✓";
+  display: inline-block;
+  margin-inline-start: 0.45em;
+  color: #00634e;
+  background: #d7fff0;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-weight: 800;
+  pointer-events: none;
+}
